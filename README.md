@@ -17,13 +17,13 @@ $ pip install remixer-pytorch
 import torch
 from remixer_pytorch import RemixerBlock
 
-model = RemixerBlock(
+block = RemixerBlock(
     dim = 512,
     seq_len = 1024
 )
 
 x = torch.randn(1, 1024, 512)
-model(x) # (1, 1024, 512)
+block(x) # (1, 1024, 512)
 ```
 
 ## Citations
