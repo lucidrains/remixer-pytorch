@@ -1,3 +1,5 @@
+<img src="./remixer.png" width="400px"></img>
+
 ## Remixer - Pytorch
 
 Implementation of the Remixer Block from the <a href="https://openreview.net/pdf?id=9FHQHJnRtfL">Remixer paper</a>, in Pytorch. It claims that substituting the feedforwards in transformers with sequence wide mixing followed by multiplication and subtraction leads to better language understanding results.

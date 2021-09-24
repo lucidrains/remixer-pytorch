@@ -15,7 +15,7 @@ class RemixerBlock(nn.Module):
         x, gate = self.proj_in(x).chunk(2, dim = -1)
         x = F.gelu(gate) * x
 
-        mixer = self.mixer.sigmoid()
+        mixer = self.mixer.softmax(dim = -1)
         mixed = einsum('b n d, m n -> b m d', x, mixer)
 
         alpha = self.alpha.sigmoid()
